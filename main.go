@@ -3,15 +3,16 @@ package main
 import (
     "fmt"
     "github.com/bradfitz/gomemcache/memcache"
-    "log"
+    "github.com/golang/glog"
     "os"
-    "errors"
 )
 
 func main() {
 
+    glog.Info("Starting transaction...")
+
     if len(os.Args) < 3 {
-        log.Fatalln(errors.New("Usage: main key value"))
+        glog.Exitln("Usage: main key value")
     }
 
     key := os.Args[1]
