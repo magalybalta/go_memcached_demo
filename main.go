@@ -18,7 +18,7 @@ func main() {
     key := os.Args[1]
     value := os.Args[2]
 
-    mc := memcache.New("localhost:11211")
+    mc := memcache.New("cache:11211")
     mc.Set(&memcache.Item{Key: key, Value: []byte(value)})
 
     it, err := mc.Get(key)

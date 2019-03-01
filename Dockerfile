@@ -1,4 +1,4 @@
-FROM golang:1.6
+FROM golang:1.12
 MAINTAINER Mario Inga <mario21ic@gmail.com>
 
 RUN wget https://raw.githubusercontent.com/pote/gpm/v1.4.0/bin/gpm && chmod +x gpm && mv gpm /usr/local/bin
