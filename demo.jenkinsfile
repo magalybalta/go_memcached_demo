@@ -53,7 +53,7 @@ pipeline {
 
   post {
     always {
-        sh "grep gomemcached-demo"
+        sh "docker images | grep gomemcached-demo"
         echo "Job has finished"
     }
     success {
